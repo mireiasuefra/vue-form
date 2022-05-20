@@ -1,5 +1,5 @@
 <script setup>
-import ButtonNext from "../components/ButtonNext.vue";
+import ButtonNext from "@/components/ButtonNext.vue";
 </script>
 
 <template>

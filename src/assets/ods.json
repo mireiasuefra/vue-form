@@ -1,0 +1,87 @@
+[
+    {
+        "id": 1,
+        "name": "Fin de la pobreza.",
+        "image": "ODS-01.png"
+    },
+    {
+        "id": 2,
+        "name": "Hambre cero.",
+        "image": "ODS-02.png"
+    },
+    {
+        "id": 3,
+        "name": "Salud y bienestar.",
+        "image": "ODS-03.png"
+    },
+    {
+        "id": 4,
+        "name": "Educacion de calidad.",
+        "image": "ODS-04.png"
+    },
+    {
+        "id": 5,
+        "name": "Igualdad de género.",
+        "image": "ODS-05.png"
+    },
+    {
+        "id": 6,
+        "name": "Agua limpia y saneamiento.",
+        "image": "ODS-06.png"
+    },
+    {
+        "id": 7,
+        "name": "Energía asequible y no contaminante.",
+        "image": "ODS-07.png"
+    },
+    {
+        "id": 8,
+        "name": "Trabajo decente y crecimiento economico.",
+        "image": "ODS-08.png"
+    },
+    {
+        "id": 9,
+        "name": "Industria, innovación e infraestructura.",
+        "image": "ODS-09.png"
+    },
+    {
+        "id": 10,
+        "name": "Reducción de las desigualdades.",
+        "image": "ODS-010.png"
+    },
+    {
+        "id": 11,
+        "name": "Ciudades y comunidades sostenibles.",
+        "image": "ODS-11.png"
+    },
+    {
+        "id": 12,
+        "name": "Producción y consumos responsables.",
+        "image": "ODS-12.png"
+    },
+    {
+        "id": 13,
+        "name": "Acción por el clima.",
+        "image": "ODS-13.png"
+    },
+    {
+        "id": 14,
+        "name": "Vida submarina.",
+        "image": "ODS-14.png"
+    },
+    {
+        "id": 15,
+        "name": "Vida de ecosistemas terrestres.",
+        "image": "ODS-15.png"
+    },
+    {
+        "id": 16,
+        "name": "Paz, justicia e instituciones sólidas.",
+        "image": "ODS-16.png"
+    },
+    {
+        "id": 17,
+        "name": "Alianzas para lograr los objetivos.",
+        "image": "ODS-17.png"
+    }
+]

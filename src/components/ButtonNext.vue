@@ -8,12 +8,6 @@ defineProps({
 
 <template>
   <RouterLink :to="goTo">
-    <button class="button-next">Siguente</button>
+    <button class="btn btn-primary mr-1">Siguente</button>
   </RouterLink>
 </template>
-
-<style scoped>
-.button-next {
-  padding: 10px;
-}
-</style>
