@@ -5,7 +5,6 @@ import ButtonNext from "@/components/ButtonNext.vue";
 
 <template>
   <main>
-    Este es mi paso para los ODS
     <ODSList />
     <ButtonNext go-to="/books" />
   </main>
