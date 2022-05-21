@@ -1,3 +1,15 @@
+<script>
+import SummaryInfo from "@/components/SummaryInfo.vue";
+
+export default {
+  components: {
+    SummaryInfo,
+  },
+};
+</script>
+
 <template>
-  <main>Este es mi paso para el resumen</main>
+  <main>
+    <SummaryInfo />
+  </main>
 </template>

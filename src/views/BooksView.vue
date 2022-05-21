@@ -1,5 +1,11 @@
-<script setup>
+<script>
 import ButtonNext from "@/components/ButtonNext.vue";
+
+export default {
+  components: {
+    ButtonNext,
+  },
+};
 </script>
 
 <template>

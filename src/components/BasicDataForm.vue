@@ -1,16 +1,29 @@
-<script setup>
+<script>
 import { Form, Field } from "vee-validate";
 import * as Yup from "yup";
 
-const schema = Yup.object().shape({
-  name: Yup.string().required("El nombre es requerido"),
-  surname: Yup.string().required("El apellido es requerido"),
-  comment: Yup.string(),
-});
-
-function onSubmit(values) {
-  console.log("ON SUBMIT" + JSON.stringify(values, null, 4));
-}
+export default {
+  components: {
+    Form,
+    Field,
+  },
+  data() {
+    return {
+      schema: Yup.object().shape({
+        name: Yup.string().required("El nombre es requerido"),
+        surname: Yup.string().required("El apellido es requerido"),
+        comment: Yup.string(),
+      }),
+    };
+  },
+  methods: {
+    onSubmit(values) {
+      this.$store.commit("setName", values.name);
+      this.$store.commit("setSurname", values.surname);
+      this.$store.commit("setComment", values.comment);
+    },
+  },
+};
 </script>
 
 <template>
@@ -54,7 +67,7 @@ function onSubmit(values) {
       />
     </div>
     <div class="mb-3">
-      <button type="submit" class="btn btn-primary mr-1">Enviar</button>
+      <button type="submit" class="btn btn-primary mr-1">Validar</button>
     </div>
   </Form>
 </template>

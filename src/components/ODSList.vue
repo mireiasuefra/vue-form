@@ -5,23 +5,21 @@ export default {
   data() {
     return {
       odsList: odsData,
-      favourites: [],
     };
   },
   methods: {
     onClick(odsClicked) {
-      const odsFound = this.favourites.find(
+      const odsFound = this.$store.state.odsFavourites.find(
         (odsFavourite) => odsFavourite.id === odsClicked.id
       );
 
       if (!odsFound) {
-        this.favourites.push(odsClicked);
-        odsClicked.isSelected = true;
+        if (this.$store.state.odsFavourites.length < 3) {
+          this.$store.commit("addFavourite", odsClicked);
+          odsClicked.isSelected = true;
+        }
       } else {
-        const index = this.favourites.findIndex(
-          (odsFavourite) => odsFavourite.id === odsClicked.id
-        );
-        this.favourites.splice(index, 1);
+        this.$store.commit("removeFavourite", odsClicked);
         odsClicked.isSelected = false;
       }
     },
@@ -58,8 +56,8 @@ export default {
   justify-content: center;
 
   &__item {
-    min-width: 250px;
-    max-width: 400px;
+    min-width: 100px;
+    max-width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,6 +66,7 @@ export default {
     margin: 10px;
     border: 1px solid rgb(219, 54, 109);
     border-radius: 10%;
+    cursor: pointer;
 
     &--favourite {
       background-color: rgba(219, 54, 109, 0.377);
