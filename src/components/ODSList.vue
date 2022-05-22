@@ -1,7 +1,11 @@
 <script>
 import odsData from "../assets/ods.json";
+import ODSItem from "@/components/ODSItem.vue";
 
 export default {
+  components: {
+    ODSItem,
+  },
   data() {
     return {
       odsList: odsData,
@@ -28,59 +32,23 @@ export default {
 </script>
 
 <template>
-  <div>
-    <ul class="ods">
-      <li
-        class="ods__item"
-        :class="{ 'ods__item--favourite': ods.isSelected }"
+  <section>
+    <ul class="ods-list">
+      <ODSItem
         v-for="ods in odsList"
         :key="ods.id"
-        @click="() => onClick(ods)"
-      >
-        <p class="ods__name">{{ ods.name }}</p>
-        <img
-          class="ods__image"
-          :src="`src/assets/ods/${ods.image}`"
-          :autocorrect="ods.name"
-        />
-      </li>
+        :ods="ods"
+        @click="onClick(ods)"
+      />
     </ul>
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
-.ods {
+.ods-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-
-  &__item {
-    min-width: 100px;
-    max-width: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 10px;
-    border: 1px solid rgb(219, 54, 109);
-    border-radius: 10%;
-    cursor: pointer;
-
-    &--favourite {
-      background-color: rgba(219, 54, 109, 0.377);
-    }
-  }
-  &__name {
-    text-align: center;
-    font-size: 18px;
-    padding-top: 10px;
-  }
-  &__image {
-    width: 75%;
-    padding: 15px;
-    border-radius: 10%;
-  }
 }
 </style>
