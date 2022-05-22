@@ -32,8 +32,9 @@ export default {
 </script>
 
 <template>
-  <section>
-    <ul class="ods-list">
+  <section class="ods-list">
+    <h2 class="ods-list__title">Objetivos de Desarrollo Sostenible</h2>
+    <ul class="ods-list__list">
       <ODSItem
         v-for="ods in odsList"
         :key="ods.id"
@@ -46,9 +47,24 @@ export default {
 
 <style lang="scss" scoped>
 .ods-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  &__title {
+    color: $terciary-color;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 30px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 </style>
